@@ -16,14 +16,6 @@ function M.setup(config)
         if config.lsp.on_attach then
             config.lsp.on_attach(client, bufnr)
         end
-
-        if config.lsp.on_attach then
-            config.lsp.on_attach(client, bufnr)
-        end
-
-        if config.lsp.on_init then
-            config.lsp.on_init(client, bufnr)
-        end
     end
 
     local default_on_init = function(client, bufnr)

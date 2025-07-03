@@ -47,9 +47,6 @@ use {
     config = function()
         require('prisma').setup()
     end
-    opts = {
-        -- default configuration
-    }
 }
 ```
 
@@ -72,6 +69,33 @@ require('prisma').setup({
 })
 ```
 
+
+### Using with NvChad
+
+```lua
+  {
+      'dastanaron/prisma.nvim',
+      event = "VeryLazy",
+      dependencies = {
+          'williamboman/mason.nvim',
+          'neovim/nvim-lspconfig',
+          'nvim-treesitter/nvim-treesitter'
+      },
+      config = function()
+        local nvlsp = require "nvchad.configs.lspconfig"
+        require('prisma').setup({
+        lsp = {
+          on_attach = function(client, bufnr)
+              nvlsp.on_attach(client, bufnr)
+          end,
+          capabilities = nvlsp.capabilities,
+          on_init = nvlsp.on_init,
+        }
+      })
+      end,
+  }
+```
+
 ## Usage
 
 ### Basic Workflow
@@ -90,9 +114,6 @@ require('prisma').setup({
 
 " Show schema diagnostics
 :LspInfo
-
-" Show documentation
-K
 ```
 
 ### Custom Keybindings
