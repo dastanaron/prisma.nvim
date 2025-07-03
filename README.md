@@ -149,25 +149,3 @@ require('prisma').setup({
 ```vim
 :TSInstall prisma
 ```
-
----
-
-**Enjoy Prisma development in Neovim!** 🚀
-
-```
-
-This README includes:
-1. Clear installation instructions for popular package managers
-2. Configuration examples
-3. Usage patterns
-4. Common customization scenarios
-5. Troubleshooting section
-6. Animated demo placeholder (you should add real screenshots/GIFs)
-
-You might want to:
-1. Add actual demo GIFs
-2. Include contribution guidelines
-3. Add a feature comparison table with coc-prisma
-4. Add CI/CD badges if you set up automated testing
-5. Include Prisma version compatibility information
-```

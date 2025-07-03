@@ -12,9 +12,17 @@ function M.setup(config)
             })
         end
 
-        -- Пользовательские обработчики
+        -- Users handlers
         if config.lsp.on_attach then
             config.lsp.on_attach(client, bufnr)
+        end
+
+        if config.lsp.on_attach then
+            config.lsp.on_attach(client, bufnr)
+        end
+
+        if config.lsp.on_init then
+            config.lsp.on_init(client, bufnr)
         end
     end
 
